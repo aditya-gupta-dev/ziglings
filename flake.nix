@@ -8,7 +8,6 @@
     zig-overlay.url = "github:mitchellh/zig-overlay";
     zig-overlay.inputs.nixpkgs.follows = "nixpkgs";
 
-    # Added ZLS input
     zls.url = "github:zigtools/zls";
     zls.inputs.nixpkgs.follows = "nixpkgs";
     zls.inputs.zig-overlay.follows = "zig-overlay";
@@ -20,7 +19,7 @@
       nixpkgs,
       flake-utils,
       zig-overlay,
-      zls, # Added zls to arguments
+      zls,
     }:
     flake-utils.lib.eachDefaultSystem (
       system:
